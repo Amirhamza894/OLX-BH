@@ -74,6 +74,7 @@ describe('Favorites Cases', () => {
     });
 
     it.skip('should unmark all favorites', ()=>{
+        
         cy.loginWithApi()
         cy.reload();
         cy.get(fixtures.$home.profileWindowArrow).click()
