@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "cypress": "^10.9.0",
+    "cypress-plugin-steps": "^1.1.0",
     "cypress-plugin-xhr-toggle": "^1.0.0",
     "is-element-visible": "^1.0.1"
   },

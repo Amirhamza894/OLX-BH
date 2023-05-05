@@ -32,8 +32,9 @@ describe('Favorites Cases', () => {
         })
     })
 
-    it('should open login page upon clicking fav icon without login', () => {
-        cy.log('Get a random favorite icon out of 20')
+    it.('should open login page upon clicking fav icon without login', () => {
+        cy.step("Get all fav icons on home page")
+        cy.log("Select random fav icon")
         cy.get(fixtures.$favotires.FavoriteIcon)
         .should('be.visible')
         .then(($favIcons) => {  
@@ -41,10 +42,11 @@ describe('Favorites Cases', () => {
         }).should('have.length', 1)
         .click().wait(10000)
         
-        cy.log("click fevorite without login")
+        cy.step("Click on fav icon without login")
+        cy.log("Login popup should open")
         cy.get(fixtures.$login.login_popup)
         .should('be.visible')
-
+        
     })
 
     it('should mark as favorite', () => {
